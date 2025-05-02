@@ -1,8 +1,9 @@
 # MedBlocks Patient Registration App
 
 A frontend-only patient registration application built with Next.js 14 that uses PGlite for local data storage. This application allows healthcare providers to register new patients, view patient records, and run custom SQL queries against the patient database.
-
-![MedBlocks Application](https://via.placeholder.com/800x400?text=MedBlocks+Application)
+<img width="1609" alt="Screenshot 2025-05-02 at 11 47 22 PM" src="https://github.com/user-attachments/assets/5896f1cb-6ee5-4073-ab53-0b49ff78ca55" />
+<img width="1653" alt="Screenshot 2025-05-02 at 11 46 46 PM" src="https://github.com/user-attachments/assets/f7a7b0ad-842e-4cfc-8869-d6ff4d794959" />
+<img width="1596" alt="Screenshot 2025-05-02 at 11 47 42 PM" src="https://github.com/user-attachments/assets/8e42f3cb-de4c-4c73-9be2-0b7d3e54cee0" />
 
 ## Features
 
