@@ -53,18 +53,18 @@ A frontend-only patient registration application built with Next.js 14 that uses
 
 ### Patient Registration
 
-1. Navigate to the "Register Patient" page
+1. Navigate to the "Home ("/") " page
 2. Fill in the required patient information
 3. Submit the form to add the patient to the database
 
 ### Viewing Patient Records
 
-1. Visit the "Patients" page to see a list of all registered patients
+1. On the Home Page, Click on Patient List Tab to see a list of all registered patients
 2. Use the filtering and sorting options to find specific patients
 
 ### Running SQL Queries
 
-1. Go to the "Query Tool" page
+1. On the Home Page, Click on Query Tool Tab to open the Query Tab. 
 2. Write your SQL query in the provided editor
 3. Click "Execute" to run the query and view results
 4. Example queries:
