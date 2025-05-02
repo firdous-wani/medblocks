@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PatientForm } from "@/components/patient-form/PatientForm";
 import { Toaster } from "@/components/ui/toaster";
-import QueryTool from "@/components/query-tool/QueryTool";
 import { PatientList } from "@/components/patient-list/PatientList";
+import { QueryTool } from "@/components/query-tool/QueryTool";
 
 export default function Home() {
   const [patientListKey, setPatientListKey] = useState<number>(0);
