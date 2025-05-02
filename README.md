@@ -1,38 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MedBlocks Patient Registration App
+
+A frontend-only patient registration application built with Next.js 14 that uses PGlite for local data storage. This application allows healthcare providers to register new patients, view patient records, and run custom SQL queries against the patient database.
+
+![MedBlocks Application](https://via.placeholder.com/800x400?text=MedBlocks+Application)
+
+## Features
+
+- **Patient Registration Form** : Add new patients with comprehensive information validation using Zod and react-hook-form
+- **Patient List** : View and manage all registered patients in a clean, sortable interface
+- **SQL Query Tool** : Run custom SQL queries against the patient database to retrieve specific records
+- **Data Persistence** : Patient data persists across page refreshes using PGlite's local database capabilities
+- **Multi-tab Support** : Synchronize data across multiple browser tabs for collaborative workflows
+
+## Tech Stack
+
+- **Frontend Framework** : Next.js 14
+- **Language** : TypeScript
+- **Database** : PGlite (client-side SQL database)
+- **Form Management** : react-hook-form with Zod validation
+- **UI Components** : shadcn/ui component library
+- **Styling** : TailwindCSS
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/firdous-wani/medblocksPublic.git
+   cd medblocksPublic
+   ```
+2. Install dependencies:
+
+   ```bash
+   npm install
+
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000/) with your browser to see the application.
+
+## Usage Guide
+
+### Patient Registration
+
+1. Navigate to the "Register Patient" page
+2. Fill in the required patient information
+3. Submit the form to add the patient to the database
+
+### Viewing Patient Records
+
+1. Visit the "Patients" page to see a list of all registered patients
+2. Use the filtering and sorting options to find specific patients
+
+### Running SQL Queries
+
+1. Go to the "Query Tool" page
+2. Write your SQL query in the provided editor
+3. Click "Execute" to run the query and view results
+4. Example queries:
+   ```sql
+   -- Get all patients
+   SELECT * FROM patients;
+   -- Count patients by gender
+   SELECT gender, COUNT(*) as count FROM patients GROUP BY gender
+   ```
+
+## Project Structure
+
+```
+|── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+├── src
+│   ├── app
+│   │   ├── favicon.ico
+│   │   ├── fonts
+│   │   │   ├── GeistMonoVF.woff
+│   │   │   └── GeistVF.woff
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components
+│   │   ├── patient-form
+│   │   │   └── PatientForm.tsx
+│   │   ├── patient-list
+│   │   │   └── PatientList.tsx
+│   │   ├── query-tool
+│   │   │   └── QueryTool.tsx
+│   │   └── ui
+│   │       ├── button.tsx
+│   │       ├── card.tsx
+│   │       ├── dialog.tsx
+│   │       ├── form.tsx
+│   │       ├── input.tsx
+│   │       ├── label.tsx
+│   │       ├── select.tsx
+│   │       ├── table.tsx
+│   │       ├── tabs.tsx
+│   │       ├── textarea.tsx
+│   │       ├── toast.tsx
+│   │       └── toaster.tsx
+│   ├── hooks
+│   │   └── use-toast.ts
+│   ├── lib
+│   │   ├── db.ts
+│   │   └── utils.ts
+│   └── types
+│       └── index.ts
+├── tailwind.config.ts
+└── tsconfig.json
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Acknowledgements
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# medblocks
-A frontend-only patient registration app using PGlite for data storage.
+- [Next.js](https://nextjs.org/) - The React Framework
+- [PGlite](https://github.com/electric-sql/pglite) - SQLite compiled to WebAssembly with PostgreSQL compatibility
+- [shadcn/ui](https://ui.shadcn.com/) - Beautifully designed components
+- [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework
