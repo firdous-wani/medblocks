@@ -33,8 +33,8 @@ A frontend-only patient registration application built with Next.js 14 that uses
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/firdous-wani/medblocksPublic.git
-   cd medblocksPublic
+   git clone https://github.com/firdous-wani/https://github.com/firdous-wani/medblocks
+   cd medblocks
    ```
 2. Install dependencies:
 
